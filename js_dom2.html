@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Dom</title>
+</head>
+<body>
+    <div style="width: 30%;">
+        <p id='test' style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet, delectus obcaecati nemo exercitationem omnis quam? Iusto distinctio quo tempora facere in cum, ullam sunt recusandae expedita sapiente dolore obcaecati?</p>
+        <button onclick="showMore();" id="button">show more</button>
+    </div>
+    
+    <script>
+        function showMore() {
+            if (document.getElementById('button').innerHTML == 'show more') {
+                document.getElementById('test').removeAttribute('style');
+                document.getElementById('button').innerHTML = 'show less';
+            } else {
+                document.getElementById('test').setAttribute('style', "text-overflow: ellipsis; white-space: nowrap; overflow: hidden;");
+                document.getElementById('button').innerHTML = 'show more';
+            }
+        }
+    </script>
+</body>
+</html>

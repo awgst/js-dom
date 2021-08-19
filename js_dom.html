@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Dom</title>
+</head>
+<body>
+    <div style="width: 200px; height: 200px; background-color: red;" id="kotak"></div>
+    <button id="button">Ganti warna!</button>
+    <script>
+        var warna = "merah";
+        var kotak = document.getElementById('kotak');
+        var button = document.getElementById('button');
+        button.addEventListener('click', function () {
+            if (warna == 'merah') {
+                kotak.style.backgroundColor = 'blue';
+                warna = 'biru';
+            } else {
+                kotak.style.backgroundColor = 'red';
+                warna = 'merah';
+            }
+        });
+    </script>
+</body>
+</html>
